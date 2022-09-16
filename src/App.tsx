@@ -1,6 +1,6 @@
 import { typeOptions } from "@testing-library/user-event/dist/type/typeImplementation";
 import React, { useState } from "react";
-import { Todo, Event } from "./model";
+import { TodoModel, Event } from "./model";
 import TodoList from "./components/TodoList";
 
 import "./App.css";
@@ -9,7 +9,7 @@ import InputField from "./components/InputField";
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<TodoModel[]>([]);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
